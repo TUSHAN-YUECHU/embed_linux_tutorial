@@ -1,8 +1,8 @@
 
 
-KERNEL_DIR = /home/wind/ebf_6ull_linux
+KERNEL_DIR = /home/embedfire/linux4.19
 
-obj-m := my_pdev.o my_pdrv.o
+obj-m := led_pdev.o led_pdrv.o
 
 all:modules
 modules clean:

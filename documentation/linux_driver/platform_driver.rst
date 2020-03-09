@@ -536,7 +536,7 @@ platform_device_id结构体
 
     MODULE_DEVICE_TABLE(platform, my_pdev_ids);
 
-
+wpa_passphrase embedfire_dev wildfire > wifi.conf
 probe函数
 ^^^^^
 
@@ -657,3 +657,12 @@ Makefile
 实验结果
 -----
 
+Or, in common situations where the device is known not to be hot-pluggable, the probe() routine can live in an init section to reduce the driver’s runtime memory footprint:
+——对于一些不支持热插拔的设备，可以使用platform_driver_probe函数，这样可以减少内存占用
+Registering a driver using platform_driver_probe() works just like using platform_driver_register(), except that the driver won’t be probed later if another device registers. (Which is OK, since this interface is only for use with non-hotpluggable devices.)
+——使用该API只能probe一次
+
+
+
+platform_device.id … the device instance number, or else “-1” to indicate there’s only one.
+——platform_device结构体中的id成员
