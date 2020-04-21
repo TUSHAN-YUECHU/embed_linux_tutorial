@@ -3,7 +3,8 @@
 pinctrl子系统和gpio子系统
 ------------------
 
-本章将会使用GPIO子系统实现LED驱动，GPIO子系统要用到pinctrl子系统所以本章将pinctrl子系统和GPIO子系统放在一块讲解。
+本章将会使用GPIO子系统实现LED驱动，GPIO子系统要用到pinctrl子系统
+所以本章将pinctrl子系统和GPIO子系统放在一块讲解。
 
 pinctrl子系统
 ~~~~~~~~~~
