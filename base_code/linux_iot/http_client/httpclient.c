@@ -8,9 +8,11 @@
 #include <netdb.h>
 #include <ctype.h>
 
+
 /********************************************
 功能：搜索字符串右边起的第一个匹配字符
 ********************************************/
+/*
 char *right_strchr(char * s, char x)
 {
     int i = strlen(s);
@@ -25,6 +27,7 @@ char *right_strchr(char * s, char x)
     }
     return 0;
 }
+*/
 
 /********************************************
 功能：把字符串转换为全小写
@@ -151,7 +154,8 @@ int main(int argc, char *argv[])
 
     /*取得真实的文件名*/
     if (host_file && *host_file) 
-        pt = right_strchr(host_file, '/');
+       // pt = right_strchr(host_file, '/');
+        pt = strrchr(host_file, '/');
     else 
         pt = 0;
 
